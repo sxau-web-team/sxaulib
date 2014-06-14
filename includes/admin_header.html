@@ -1,0 +1,87 @@
+<!DOCTYPE html >
+<head>
+	<title><?php echo $page_title; ?></title>	
+	<!--<link rel="stylesheet" href="../includes/admin_style.css" type="text/css" media="screen" /> -->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="../css/uikit.almost-flat.css" />
+                <script src="../js/jquery.js"></script>
+                <script src="../js/uikit.min.js"></script>
+    <script type="text/javascript" src="tinymce/tinymce.min.js"></script>
+
+<script type="text/javascript">
+ 
+tinymce.init({
+  selector: "textarea",
+  
+  // ===========================================
+  // INCLUDE THE PLUGIN
+  // ===========================================
+	
+  plugins: [
+    "advlist autolink lists link image charmap print preview anchor",
+    "searchreplace visualblocks code fullscreen",
+    "insertdatetime media table contextmenu paste jbimages"
+  ],
+	
+  // ===========================================
+  // PUT PLUGIN'S BUTTON on the toolbar
+  // ===========================================
+	
+  toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
+	
+  // ===========================================
+  // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
+  // ===========================================
+	
+  relative_urls: false
+	
+});
+ 
+</script>
+
+</head>
+<body>
+ <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+	 <div class="uk-margin-midium uk-panel-box">
+   
+		<h2>山西农业大学图书馆后台管理系统</h2>
+		<h3>SHANXI AGRECULTURAL UNIVERSITY LIBRARY MANAGEMENT</h3>
+    	</div>
+<br>
+      <nav class="uk-navbar  uk-navbar-attached">
+    <ul class="uk-navbar-nav">
+        <li class="uk-active"><a href=""><i class="uk-icon-location-arrow uk-icon-small"></i>    <?php echo $page_title; ?></a></li>
+        
+    </ul>
+</nav>
+	<br>
+		
+<div class="uk-grid" data-uk-grid-margin>
+ <div class="uk-width-medium-1-5">
+                    <div class="uk-panel uk-panel-box" data-uk-sticky="{top:35}">
+                        <ul class="uk-nav uk-nav-side" data-uk-scrollspy-nav="{closest:'li', smoothscroll:true}">
+            <li class="<?php if($page_title=='发布消息') echo 'uk-active'; else echo '';?>"><a href="post.php"><i class="uk-icon-pencil-square-o"></i>  发布消息</a></li>
+            <li class="<?php if($page_title=='发布资源') echo 'uk-active'; else echo '';?>"><a href="post_source.php">
+            <i class="uk-icon-pencil"></i>  发布资源</a></li>
+            <li class="<?php if($page_title=='文章管理') echo 'uk-active'; else echo '';?>"><a href="news.php">
+            <i class="uk-icon-rss"></i>  文章管理</a></li>
+            <li class="<?php if($page_title=='馆藏资源') echo 'uk-active'; else echo '';?>"><a href="source.php">
+            <i class="uk-icon-tags"></i>  馆藏资源</a></li>
+            <li class="<?php if($page_title=='首页图片管理') echo 'uk-active'; else echo '';?>"><a href="show_image.php"><i class="uk-icon-picture-o"></i>  展示图片</a></li>
+      <li class="<?php if($page_title=='添加用户') echo 'uk-active'; else echo '';?>"><a href="register.php"><i class="uk-icon-plus"></i>  添加用户</a></li>
+      <li class="<?php if($page_title=='查看已有用户') echo 'uk-active'; else echo '';?>"><a href="view_users.php">
+      <i class="uk-icon-user"></i>  查看用户</a></li>
+      <li class="<?php if($page_title=='修改密码') echo 'uk-active'; else echo '';?>"><a href="password.php">
+      <i class="uk-icon-cog"></i> 修改密码</a></li>
+      
+                  <li><?php 
+            if( (isset($_COOKIE['user_id']))&&(basename($_SERVER['PHP_SELF'])!='logout.php')){
+        echo'<a href="logout.php"><i class="uk-icon-power-off"></i> 退出</a>';}else{
+    echo'<a href="login.php">登录</a>';
+}
+?></li>
+    </ul>
+  </div>
+  </div>
+  <!-- Start of the page-specific content. -->
+<!-- Script 9.1 - header.html -->

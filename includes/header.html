@@ -1,0 +1,147 @@
+<!DOCTYPE html >
+
+<head>
+	<title><?php echo $page_title; ?></title>	
+	<link rel="stylesheet" href="//includes/style.css" type="text/css" media="screen" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+                <link rel="stylesheet" href="css/uikit.gradient.css" />
+                <script src="js/jquery.js"></script>
+                <script src="js/uikit.min.js"></script>
+<link href="css/lanrenzhijia.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/lanrenzhijia.js"></script> 
+</head>
+<body class="tm-background">
+<!--    <script type="text/javascript"><META content="text/html; charset=gb2312" http-equiv=Content-Type>
+    var browser = {
+            versions: function () {
+                var u = navigator.userAgent, app = navigator.appVersion;
+                return {//移动终端浏览器版本信息
+                    trident: u.indexOf('Trident') > -1, //IE内核
+                    presto: u.indexOf('Presto') > -1, //opera内核
+                    webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                    mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                    iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+                    iPad: u.indexOf('iPad') > -1, //是否iPad
+                    webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+                };
+            } (),
+            language: (navigator.browserLanguage || navigator.language).toLowerCase()
+        }
+if ( browser.versions.ios == true || browser.versions.android == true) {
+            window.location.href = 'http://m.5read.com/sxnydxyd';
+        }</script> -->
+        <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+	<div id="header">
+                    <div class="uk-width-medium">
+ <img src="./images/sxaulib_header.png">
+ </div>
+
+    
+       
+   
+                           
+                            <div id="modal" class="uk-modal" >
+                                <div class="uk-modal-dialog">
+                                    <a href="" class="uk-modal-close uk-close"></a>
+                                   
+                                    <h3>登 录</h3>
+
+                <img class="uk-margin-bottom" src="" alt="" height="120" width="140">
+
+                <form class="uk-panel uk-panel-box uk-form" name="form1" method="post" action="http://libweb.sxau.edu.cn/dzjs/login.asp">
+                    <div class="uk-form-row">
+
+                        <input class="uk-width-1-1 uk-form-large" name="user" placeholder="Username" type="text">
+                    </div>
+                    <div class="uk-form-row">
+                        <input class="uk-width-1-1 uk-form-large" name="pw" placeholder="Password" type="password">
+                    </div>
+                    <div class="uk-form-row">
+                        <button class="uk-width-1-1 uk-button uk-button-primary uk-button-large" >Login</button>
+                    </div>
+                    
+                </form>
+
+
+                                </div>
+                            </div>
+
+         <nav class="uk-navbar uk-margin-large-bottom">
+                <a class="uk-navbar-brand uk-hidden-small" href="index.php"><i class="uk-icon-home "></i>  首页</a>
+                <ul class="uk-navbar-nav uk-hidden-small">
+                    <li class="<?php if($page_title=='本馆概况') echo 'uk-active';else echo'';?>">
+                        <a href="http://libweb.sxau.edu.cn/bgjs/gsjs.asp">本馆概况</a>
+                    </li>
+                    <li  class="<?php if($page_title=='公告通知') echo 'uk-active';else echo'';?>">
+                        <a href="art_list.php">公告通知</a>
+                    </li>
+                    <li  class="<?php if($page_title=='公共查询') echo 'uk-active';else echo'';?>">
+                        <a href="http://libweb.sxau.edu.cn/WXJS/tmjs_form.asp">公共查询</a>
+                    </li>
+                    <li  class="<?php if($page_title=='新书通报') echo 'uk-active';else echo'';?>">
+                        <a href="http://libweb.sxau.edu.cn/xstb/default.asp">新书通报</a>
+                    </li>
+                    <li  class="<?php if($page_title=='电子资源') echo 'uk-active';else echo'';?>">
+                        <a href="source_list.php?class=1">电子资源</a>
+                    </li>
+                    <li  class="<?php if($page_title=='学科导航') echo 'uk-active';else echo'';?>">
+                        <a href="http://libweb.sxau.edu.cn/xkdh.htm">学科导航</a>
+                    </li>
+                    <li  class="<?php if($page_title=='读者导购') echo 'uk-active';else echo'';?>">
+                        <a href="http://libweb.sxau.edu.cn/dzjs/login_form.asp">读者导购</a>
+                    </li>
+                    <li  class="<?php if($page_title=='读者问答') echo 'uk-active';else echo'';?>">
+                        <a href="http://libweb.sxau.edu.cn/ckzx/DEFAULT.ASP">读者问答</a>
+                    </li>
+                    
+                </ul>
+                <div class="uk-navbar-flip">
+                    <ul class="uk-navbar-nav ">
+                    <li>
+                         <a href="#"><button class="uk-button uk-button-primary" data-uk-modal="{target:'#modal'}">登 录</button></a>
+                    </li>
+                    </ul>
+                </div>
+                <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+                <div class="uk-navbar-brand uk-navbar-center uk-visible-small"><?php echo $page_title;?></div>
+            </nav>
+               <div id="offcanvas" class="uk-offcanvas">
+            <div class="uk-offcanvas-bar">
+                <ul class="uk-nav uk-nav-offcanvas">
+                    <li  class="<?php if($page_title=='本馆概况') echo 'uk-active';else echo'';?>">
+                        <a href="http://libweb.sxau.edu.cn/bgjs/gsjs.asp">本馆概况</a>
+                    </li>
+                    <li  class="<?php if($page_title=='公告通知') echo 'uk-active';else echo'';?>">
+                        <a href="art_list.php">公告通知</a>
+                    </li>
+                    <li  class="<?php if($page_title=='公共查询') echo 'uk-active';else echo'';?>">
+                        <a href="http://libweb.sxau.edu.cn/WXJS/tmjs_form.asp">公共查询</a>
+                    </li>
+                    <li  class="<?php if($page_title=='新书通报') echo 'uk-active';else echo'';?>">
+                        <a href="http://libweb.sxau.edu.cn/xstb/default.asp">新书通报</a>
+                    </li>
+                    <li  class="<?php if($page_title=='电子资源') echo 'uk-active';else echo'';?>">
+                        <a href="source_list.php?class=1">电子资源</a>
+                    </li>
+                    <li  class="<?php if($page_title=='学科导航') echo 'uk-active';else echo'';?>">
+                        <a href="http://libweb.sxau.edu.cn/xkdh.htm">学科导航</a>
+                    </li>
+                    <li  class="<?php if($page_title=='读者导购') echo 'uk-active';else echo'';?>">
+                        <a href="http://libweb.sxau.edu.cn/dzjs/login_form.asp">读者导购</a>
+                    </li>
+                    <li  class="<?php if($page_title=='读者问答') echo 'uk-active';else echo'';?>">
+                        <a href="http://libweb.sxau.edu.cn/ckzx/DEFAULT.ASP">读者问答</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+<div style="display:none"><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F0c44dcd3aa48076b3e0a91169a4ac665' type='text/javascript'%3E%3C/script%3E"));
+</script></div>
+
